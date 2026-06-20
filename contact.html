@@ -41,6 +41,36 @@
 
   /* main contact grid */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  
+  /* contact form */
+  .contact-form{display:flex;flex-direction:column;gap:18px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;margin-top:18px;scroll-margin-top:100px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .form-group{display:flex;flex-direction:column;gap:7px}
+  .form-group label{font-weight:600;font-size:13.5px;color:var(--ink);letter-spacing:.01em}
+  .form-group input,
+  .form-group select,
+  .form-group textarea{font-family:inherit;font-size:15px;padding:11px 15px;border:1.5px solid var(--line);border-radius:10px;transition:border-color .2s,box-shadow .2s;background:#fff;color:var(--ink)}
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .form-group textarea{resize:vertical;min-height:110px;line-height:1.5}
+  .contact-form .btn{width:100%;margin-top:6px;justify-content:center}
+  .contact-form .btn .arr{display:none}
+  .form-title{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:-.01em;margin-bottom:6px}
+  .form-success{display:none;background:var(--accent-soft);color:var(--accent-deep);padding:16px 20px;border-radius:12px;font-weight:600;font-size:14px}
+  @media(max-width:640px){.form-row{grid-template-columns:1fr}}
+  
+  /* smooth scroll */
+  html{scroll-behavior:smooth}
+  
+  /* highlight effect when landing on form */
+  .contact-form:target{animation:highlight 2s ease-out}
+  @keyframes highlight{
+    0%{box-shadow:0 0 0 0 var(--accent),0 0 40px rgba(68,123,157,.3)}
+    25%{box-shadow:0 0 0 8px transparent,0 0 40px rgba(68,123,157,.3)}
+    75%{box-shadow:0 0 0 8px transparent,0 0 40px rgba(68,123,157,.3)}
+    100%{box-shadow:0 0 0 0 transparent,0 0 0 transparent}
+  }
 
   /* details column */
   .details{display:flex;flex-direction:column;gap:16px}
@@ -126,7 +156,73 @@
             <span><span class="k">Telefoon</span><span class="v">+32 496 54 86 14</span></span>
           </a>
 
-          <a href="mailto:evert@motoexperience.be?subject=Aanvraag%20via%20MotoExperience&body=Dag%20Evert%2C%0A%0AIk%20zou%20graag%20meer%20info%20over..." class="btn btn-primary mailbtn">Neem contact op <span class="arr">→</span></a>
+          <form action="https://formspree.io/f/mnjyeebd" method="POST" class="contact-form" id="formulier">
+            <h3 class="form-title">Stuur me een bericht</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Naam *</label>
+                <input type="text" id="name" name="name" required placeholder="Jouw naam">
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="jouw@email.be">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Telefoon</label>
+                <input type="tel" id="phone" name="phone" placeholder="+32 xxx xx xx xx">
+              </div>
+              <div class="form-group">
+                <label for="subject">Onderwerp *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Kies een optie...</option>
+                  <option value="On-road training">On-road training</option>
+                  <option value="Off-road training">Off-road training</option>
+                  <option value="Rijbewijs A">Rijbewijs A</option>
+                  <option value="Motorkar verhuur">Motorkar verhuur</option>
+                  <option value="Andere vraag">Andere vraag</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Bericht *</label>
+              <textarea id="message" name="message" required placeholder="Vertel me waarmee ik je kan helpen..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Verstuur bericht
+            </button>
+            <div class="form-success">✓ Bedankt! Je bericht is verzonden. Ik contacteer je zo snel mogelijk.</div>
+          </form>
+
+          <script>
+          // Auto-fill subject based on URL parameter
+          (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const onderwerp = urlParams.get('onderwerp');
+            const subjectSelect = document.getElementById('subject');
+            
+            if (onderwerp && subjectSelect) {
+              const mapping = {
+                'on-road': 'On-road training',
+                'off-road': 'Off-road training',
+                'rijbewijs': 'Rijbewijs A',
+                'motorkar': 'Motorkar verhuur'
+              };
+              
+              const value = mapping[onderwerp];
+              if (value) {
+                // Set the select value
+                subjectSelect.value = value;
+                // Add a subtle highlight to show it was pre-filled
+                subjectSelect.style.borderColor = 'var(--accent)';
+                setTimeout(() => {
+                  subjectSelect.style.borderColor = '';
+                }, 2000);
+              }
+            }
+          })();
+          </script>
 
           <div class="socials">
             <a href="https://www.facebook.com/MotoExperience.be" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>Facebook</a>
