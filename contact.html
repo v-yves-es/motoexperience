@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacteer me | MotoExperience</title>
+<meta name="description" content="Neem contact op met MotoExperience voor motortrainingen, rijbewijs A of motorkar verhuur. Bel +32 496 54 86 14 of mail evert@motoexperience.be. Evert helpt je graag verder.">
+<meta name="keywords" content="contact MotoExperience, motortraining boeken, Evert Cottyn, afspraak motorles, België">
+<meta name="author" content="MotoExperience - Evert Cottyn">
+<link rel="canonical" href="https://www.motoexperience.be/contact.html">
+<link rel="icon" type="image/png" href="images/site/logo_schaduw.png">
+<link rel="apple-touch-icon" href="images/site/logo_schaduw.png">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.motoexperience.be/contact.html">
+<meta property="og:title" content="Contacteer me | MotoExperience">
+<meta property="og:description" content="Neem contact op met MotoExperience voor motortrainingen, rijbewijs A of motorkar verhuur. Evert helpt je graag verder.">
+<meta property="og:image" content="https://www.motoexperience.be/images/site/logo_schaduw.png">
+<meta property="og:locale" content="nl_BE">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.motoexperience.be/contact.html">
+<meta property="twitter:title" content="Contacteer me | MotoExperience">
+<meta property="twitter:description" content="Neem contact op met MotoExperience voor motortrainingen, rijbewijs A of motorkar verhuur. Evert helpt je graag verder.">
+<meta property="twitter:image" content="https://www.motoexperience.be/images/site/logo_schaduw.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  .pagehero{padding:60px 0 0;background:linear-gradient(180deg,var(--accent-soft),transparent)}
+  .pagehero .crumb{font-size:13px;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+  .pagehero .crumb a{color:var(--muted);transition:color .2s}
+  .pagehero .crumb a:hover{color:var(--accent-deep)}
+  .pagehero .crumb .sep{opacity:.5}
+  .pagehero h1{font-family:var(--disp);font-weight:700;font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.025em;margin-bottom:18px}
+  .pagehero p.lead{font-size:18.5px;color:var(--muted);max-width:560px;text-wrap:pretty;padding-bottom:56px}
+
+  .sec{padding:72px 0}
+  .alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  /* main contact grid */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+
+  /* details column */
+  .details{display:flex;flex-direction:column;gap:16px}
+  .drow{display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;transition:border-color .2s,box-shadow .2s,transform .2s}
+  a.drow:hover{border-color:var(--accent);box-shadow:0 18px 38px -28px rgba(0,0,0,.35);transform:translateY(-2px)}
+  .drow .ic{width:50px;height:50px;border-radius:13px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent-deep);flex:none}
+  .drow .ic svg{width:24px;height:24px}
+  .drow .k{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:3px}
+  .drow .v{display:block;font-family:var(--disp);font-weight:600;font-size:18px;letter-spacing:-.01em;color:var(--ink)}
+
+  .mailcta{background:var(--ink);color:#fff;border-radius:20px;padding:32px;margin-top:6px;position:relative;overflow:hidden}
+  .mailcta::before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:var(--accent);filter:blur(110px);opacity:.5;bottom:-150px;right:-60px}
+  .mailcta h3{font-family:var(--disp);font-weight:700;font-size:23px;letter-spacing:-.01em;margin-bottom:8px;position:relative}
+  .mailcta p{font-size:15px;opacity:.82;margin-bottom:22px;position:relative;text-wrap:pretty}
+  .mailcta .btn{position:relative}
+
+  .mailbtn{align-self:flex-start;margin-top:6px}
+
+  .socials{display:flex;gap:10px;margin-top:4px}
+  .socials a{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;font-weight:600;font-size:14px;transition:border-color .2s,color .2s,background .2s}
+  .socials a:hover{border-color:var(--accent);color:var(--accent-deep);background:var(--accent-soft)}
+  .socials a svg{width:18px;height:18px}
+
+  /* Evert card */
+  .evert{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(0,0,0,.3)}
+  .evert img{width:100%;height:360px;border-radius:0;object-fit:cover;display:block}
+  .evert .body{padding:30px 32px 34px}
+  .evert .name{font-family:var(--disp);font-weight:700;font-size:26px;letter-spacing:-.01em}
+  .evert .role{font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep);margin:6px 0 16px}
+  .evert .bio{font-size:16px;color:var(--muted);text-wrap:pretty;line-height:1.6}
+  .evert .badge{display:inline-flex;align-items:center;gap:9px;margin-top:18px;background:var(--accent-soft);color:var(--accent-deep);border-radius:100px;padding:9px 16px;font-size:13.5px;font-weight:600}
+  .evert .badge svg{width:16px;height:16px}
+
+  @media(max-width:900px){
+    .contact-grid{grid-template-columns:1fr}
+    .evert{order:-1}
+  }
+</style>
+<style>
+  nav .logo img{height:40px;width:auto;display:block}
+  footer .logo img{height:34px;width:auto;display:block}
+  footer .logo::before{content:"";width:46px;height:46px;flex:none;background:url("images/site/logo_schaduw.png") center/contain no-repeat}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a href="index.html" class="logo"><img src="images/site/logov3.png" alt="MotoExperience"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#trainingen">Motortrainingen</a>
+        <a href="verhuur-motorkar.html">Verhuur motorkar</a>
+        <a href="rijbewijs-a.html">Rijbewijs A</a>
+      </div>
+      <a href="mailto:evert@motoexperience.be?subject=Aanvraag%20via%20MotoExperience" class="btn btn-primary">Stuur een mail <span class="arr">→</span></a>
+    </div>
+  </nav>
+
+  <header class="pagehero">
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contacteer me</span></div>
+      <span class="kicker"><span class="dot"></span>Contacteer me</span>
+      <h1>Laten we samen rijden</h1>
+      <p class="lead">Contacteer me voor meer informatie of maak een afspraak — en binnenkort maken we samen een motorrit.</p>
+    </div>
+  </header>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="contact-grid">
+        <!-- left: details -->
+        <div class="details">
+          <a class="drow" href="https://www.google.com/maps/search/?api=1&query=Korenbloemlaan+9+8500+Kortrijk" target="_blank" rel="noopener">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21c4-4 7-7.5 7-11a7 7 0 10-14 0c0 3.5 3 7 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <span><span class="k">Adres</span><span class="v">Korenbloemlaan 9, 8500 Kortrijk</span></span>
+          </a>
+          <a class="drow" href="mailto:evert@motoexperience.be?subject=Aanvraag%20via%20MotoExperience">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <span><span class="k">Email</span><span class="v">evert@motoexperience.be</span></span>
+          </a>
+          <a class="drow" href="tel:+32496548614">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
+            <span><span class="k">Telefoon</span><span class="v">+32 496 54 86 14</span></span>
+          </a>
+
+          <a href="mailto:evert@motoexperience.be?subject=Aanvraag%20via%20MotoExperience&body=Dag%20Evert%2C%0A%0AIk%20zou%20graag%20meer%20info%20over..." class="btn btn-primary mailbtn">Neem contact op <span class="arr">→</span></a>
+
+          <div class="socials">
+            <a href="https://www.facebook.com/MotoExperience.be" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>Facebook</a>
+            <a href="https://www.instagram.com/evert_cottyn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a>
+            <a href="https://www.youtube.com/channel/UCpGGufGZKiUZWA8yBZ8b8MA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3-.4-4.4a2.5 2.5 0 00-1.7-1.7C18.4 5.5 12 5.5 12 5.5s-6.4 0-7.9.4a2.5 2.5 0 00-1.7 1.7C2 9 2 12 2 12s0 3 .4 4.4a2.5 2.5 0 001.7 1.7c1.5.4 7.9.4 7.9.4s6.4 0 7.9-.4a2.5 2.5 0 001.7-1.7C22 15 22 12 22 12zM10 15V9l5 3z"/></svg>YouTube</a>
+          </div>
+        </div>
+
+        <!-- right: Evert -->
+        <div class="evert">
+          <img src="images/site/IMG_0715-scaled.jpg" alt="">
+          <div class="body">
+            <div class="name">Evert Cottyn</div>
+            <div class="role">Gebrevetteerd moto-instructeur</div>
+            <p class="bio">Als fervent en gepassioneerd motorrijder behaalde ik in 2018 het motor-instructeur brevet IV van de Federale Overheidsdienst Mobiliteit en Vervoer. Sindsdien doe ik niets liever dan motards extra skills aanleren om beter en veiliger on- en off-road onderweg te zijn.</p>
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>Brevet IV — FOD Mobiliteit &amp; Vervoer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div>
+          <a href="index.html" class="logo"><img src="images/site/logov3.png" alt="MotoExperience"></a>
+          <p class="foot-intro">Training by doing. Behaal je rijbewijs, verfijn je techniek en beleef de mooiste trips — on- en offroad.</p>
+        </div>
+        <div class="foot-col"><h5>Aanbod</h5><a href="on-road.html">On-road training</a><a href="off-road.html">Off-road training</a><a href="verhuur-motorkar.html">Verhuur motorkar</a><a href="rijbewijs-a.html">Rijbewijs A</a></div>
+        <div class="foot-col"><h5>Contact</h5><a href="tel:+32496548614">+32 496 54 86 14</a><a href="mailto:evert@motoexperience.be">evert@motoexperience.be</a><a href="https://www.google.com/maps/search/?api=1&query=Korenbloemlaan+9+8500+Kortrijk" target="_blank" rel="noopener">Korenbloemlaan 9, Kortrijk</a></div>
+        <div class="foot-col"><h5>Volg mee</h5><a href="https://www.facebook.com/MotoExperience.be" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/evert_cottyn" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/channel/UCpGGufGZKiUZWA8yBZ8b8MA" target="_blank" rel="noopener">YouTube</a></div>
+      </div>
+      <div class="foot-bot">
+        <span>© 2026 MotoExperience — Creating experience is everything</span>
+        <span>Gebouwd met passie voor de baan</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MotoExperience — Creating experience is everything</title>
+<meta name="description" content="MotoExperience biedt motortrainingen on-road en off-road, rijbewijs A opleidingen en motorkar verhuur in België. Training by doing — behaal je rijbewijs, verfijn je techniek en beleef de mooiste trips.">
+<meta name="keywords" content="motortraining, rijbewijs A, off-road training, on-road training, motorkar verhuur, motorles België, MotoExperience, Evert Cottyn">
+<meta name="author" content="MotoExperience - Evert Cottyn">
+<link rel="canonical" href="https://www.motoexperience.be/">
+<link rel="icon" type="image/png" href="images/site/logo_schaduw.png">
+<link rel="apple-touch-icon" href="images/site/logo_schaduw.png">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.motoexperience.be/">
+<meta property="og:title" content="MotoExperience — Creating experience is everything">
+<meta property="og:description" content="Motortrainingen on-road en off-road, rijbewijs A opleidingen en motorkar verhuur in België. Training by doing voor iedereen die motor rijden serieus neemt.">
+<meta property="og:image" content="https://www.motoexperience.be/images/site/logo_schaduw.png">
+<meta property="og:locale" content="nl_BE">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.motoexperience.be/">
+<meta property="twitter:title" content="MotoExperience — Creating experience is everything">
+<meta property="twitter:description" content="Motortrainingen on-road en off-road, rijbewijs A opleidingen en motorkar verhuur in België. Training by doing voor iedereen die motor rijden serieus neemt.">
+<meta property="twitter:image" content="https://www.motoexperience.be/images/site/logo_schaduw.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent: #447B9D;
+    --accent-deep: #2f5a74;
+    --accent-soft: #eaf1f6;
+    --ink: oklch(0.18 0.01 60);
+    --muted: oklch(0.52 0.01 60);
+    --line: oklch(0.9 0.005 60);
+    --bg: oklch(0.99 0.004 80);
+    --card: #fff;
+    --disp: "Space Grotesk", sans-serif;
+    --body: "Hanken Grotesk", sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:oklch(0.99 0.004 80 / .82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .logo{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:-.01em;display:flex;align-items:center;gap:11px}
+  .logo .mark{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:17px;font-weight:700;transform:rotate(-8deg)}
+  .logo b{font-weight:700}.logo span{color:var(--muted);font-weight:500}
+  .navlinks{display:flex;gap:32px;font-weight:500;font-size:15px}
+  .navlinks a{white-space:nowrap;position:relative;padding:6px 0;color:var(--muted);transition:color .2s}
+  .navlinks a:hover,.navlinks a.active{color:var(--ink)}
+  .navlinks a.active::after{content:"";position:absolute;left:0;bottom:-2px;width:18px;height:2px;background:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:12px 22px;border-radius:100px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px -10px var(--accent)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--accent)}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:none}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-light{background:var(--accent);color:#fff}
+  .btn-light:hover{transform:translateY(-2px)}
+  .btn .arr{transition:transform .2s}
+  .btn:hover .arr{transform:translateX(4px)}
+
+  /* hero — full-bleed cinematic feature */
+  .hero{position:relative;min-height:84vh;display:flex;align-items:flex-end;overflow:hidden;padding:0}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;z-index:0;transform:scale(1.04);transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+  .hero:hover .hero-bg{transform:scale(1.08)}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(12,14,18,.9) 0%,rgba(12,14,18,.62) 32%,rgba(12,14,18,.14) 60%,rgba(12,14,18,0) 100%),linear-gradient(0deg,rgba(12,14,18,.6) 0%,rgba(12,14,18,0) 46%)}
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:80px}
+  .hero-copy{max-width:660px}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:26px}
+  .kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .hero .kicker{color:#fff}
+  .hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(48px,6.4vw,88px);line-height:1.0;letter-spacing:-.03em;margin-bottom:22px;color:#fff;text-shadow:0 2px 40px rgba(0,0,0,.4)}
+  .hero h1 em{font-style:normal;color:#86b9d8}
+  .hero p.lead{font-size:19px;color:rgba(255,255,255,.87);max-width:520px;margin-bottom:34px;text-wrap:pretty}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff;background:none}
+  .hero .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+  /* visible, on-brand empty states for the drop zones */
+  .hero-badge{position:absolute;right:40px;bottom:38px;z-index:2;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.5);border-radius:16px;padding:18px 22px;box-shadow:0 26px 54px -22px rgba(0,0,0,.55);display:flex;align-items:center;gap:14px}
+  .hero-badge .big{font-family:var(--disp);font-weight:700;font-size:30px;line-height:1}
+  .hero-badge .sub{font-size:12.5px;color:var(--muted);max-width:120px;line-height:1.25}
+
+  /* marquee slogans */
+  .slogan-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink);color:#fff;overflow:hidden;padding:18px 0}
+  .marquee{display:flex;gap:48px;white-space:nowrap;animation:scroll 26s linear infinite;font-family:var(--disp);font-weight:600;font-size:18px;letter-spacing:.01em}
+  .marquee span{display:inline-flex;align-items:center;gap:48px;opacity:.92}
+  .marquee i{color:var(--accent);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* stats */
+  .stats{padding:64px 0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .stat{border-left:2px solid var(--line);padding-left:20px}
+  .stat .num{font-family:var(--disp);font-weight:700;font-size:46px;line-height:1;letter-spacing:-.02em}
+  .stat .num i{color:var(--accent-deep);font-style:normal}
+  .stat .lab{margin-top:8px;font-size:14px;color:var(--muted);font-weight:500}
+
+  /* section heading */
+  .sec{padding:80px 0}
+  .sec-head{max-width:640px;margin-bottom:46px}
+  .sec-head .kicker{margin-bottom:18px}
+  .sec-head h2{font-family:var(--disp);font-weight:700;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;line-height:1.06;margin-bottom:16px}
+  .sec-head p{font-size:17px;color:var(--muted);text-wrap:pretty}
+
+  /* trainings */
+  .trainings{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .train-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .train-card{position:relative;border-radius:20px;overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:34px;color:#fff;isolation:isolate}
+  .train-card img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;border-radius:0;object-fit:cover;display:block}
+  .train-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 30%,rgba(20,16,12,.85))}
+  .train-card .tag{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:var(--accent);color:#fff;padding:6px 12px;border-radius:100px;align-self:flex-start;margin-bottom:auto}
+  .train-card h3{font-family:var(--disp);font-weight:700;font-size:30px;letter-spacing:-.01em;margin-bottom:8px}
+  .train-card p{font-size:15.5px;opacity:.92;max-width:360px;margin-bottom:18px;text-wrap:pretty}
+  .train-card .more{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px}
+  .train-card .more .arr{transition:transform .2s}
+  .train-card:hover .more .arr{transform:translateX(5px)}
+
+  /* why / usps */
+  .usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .usp{background:var(--bg);padding:34px 30px;transition:background .25s}
+  .usp:hover{background:var(--accent-soft)}
+  .usp .ico{width:44px;height:44px;border-radius:12px;border:1.5px solid var(--ink);display:grid;place-items:center;margin-bottom:20px}
+  .usp .ico svg{width:22px;height:22px}
+  .usp h4{font-family:var(--disp);font-weight:600;font-size:19px;margin-bottom:8px}
+  .usp p{font-size:14.5px;color:var(--muted);text-wrap:pretty}
+
+  /* testimonials */
+  .tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .tst{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column}
+  .tst .quote{font-size:48px;font-family:var(--disp);color:var(--accent);line-height:.6;height:24px}
+  .tst p{font-size:15.5px;color:var(--ink);margin:14px 0 22px;text-wrap:pretty;flex:1}
+  .tst .who{display:flex;align-items:center;gap:13px;border-top:1px solid var(--line);padding-top:18px}
+  .tst .who img{width:46px;height:46px;border-radius:50%;flex:none;object-fit:cover;display:block}
+  .tst .who b{display:block;font-weight:600;font-size:15px}
+  .tst .who span{font-size:13px;color:var(--muted)}
+
+  /* CTA */
+  .cta{background:linear-gradient(140deg,var(--accent-deep) 0%,var(--accent) 92%);color:#fff;border-radius:26px;padding:64px;text-align:center;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(120px);opacity:.55;top:-160px;right:-80px}
+  .cta h2{font-family:var(--disp);font-weight:700;font-size:clamp(30px,4vw,50px);letter-spacing:-.02em;margin-bottom:16px;position:relative}
+  .cta p{font-size:18px;opacity:.8;max-width:480px;margin:0 auto 30px;position:relative}
+  .cta .btn{position:relative}
+  .cta .btn-light{background:#fff;color:var(--accent-deep)}
+  .cta .btn-light:hover{background:var(--accent-soft);color:var(--accent-deep)}
+
+  /* footer */
+  footer{padding:64px 0 36px}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+  .foot-top .logo{margin-bottom:16px}
+  .foot-col h5{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;font-weight:600}
+  .foot-col a{display:block;color:var(--muted);font-size:15px;padding:5px 0;transition:color .2s}
+  .foot-col a:hover{color:var(--accent-deep)}
+  .foot-bot{display:flex;justify-content:space-between;align-items:center;padding-top:24px;font-size:13.5px;color:var(--muted);flex-wrap:wrap;gap:12px}
+  .foot-intro{font-size:15px;color:var(--muted);max-width:280px;text-wrap:pretty}
+  @media(max-width:900px){
+    .hero .wrap,.train-grid,.usp-grid,.tst-grid,.foot-top{grid-template-columns:1fr}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .navlinks{display:none}
+    /* hero — mobiele behandeling: foto gecentreerd, leesbare gradient van onderaf */
+    .hero{min-height:80vh}
+    .hero-bg{object-position:50% 50%}
+    .hero-scrim{background:linear-gradient(0deg,rgba(12,14,18,.92) 0%,rgba(12,14,18,.56) 34%,rgba(12,14,18,.16) 60%,rgba(12,14,18,0) 100%)}
+    .hero .wrap{padding-top:96px;padding-bottom:52px}
+    .hero h1{font-size:clamp(38px,8.4vw,56px);margin-bottom:18px}
+    .hero p.lead{font-size:17px;margin-bottom:28px;max-width:460px}
+    .hero-badge{display:none}
+  }
+  @media(max-width:560px){
+    .hero{min-height:76vh}
+    .hero .wrap{padding-bottom:44px}
+    .hero h1{font-size:clamp(33px,9vw,46px)}
+    .hero p.lead{font-size:16.5px}
+    .hero-cta{gap:10px;width:100%}
+    .hero-cta .btn{flex:1 1 100%;justify-content:center}
+  }
+</style>
+<style>
+  nav .logo img{height:40px;width:auto;display:block}
+  footer .logo img{height:34px;width:auto;display:block}
+  footer .logo::before{content:"";width:46px;height:46px;flex:none;background:url("images/site/logo_schaduw.png") center/contain no-repeat}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a href="#" class="logo"><img src="images/site/logov3.png" alt="MotoExperience"></a>
+      <div class="navlinks">
+        <a href="#" class="active">Home</a>
+        <a href="#trainingen">Motortrainingen</a>
+        <a href="verhuur-motorkar.html">Verhuur motorkar</a>
+        <a href="rijbewijs-a.html">Rijbewijs A</a>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Contacteer me <span class="arr">→</span></a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img class="hero-bg" src="images/site/BMW-R-1200-GS-Rallye-2016-3840x2160-043.jpg" alt="BMW R 1200 GS Rallye in de bocht">
+    <div class="hero-scrim"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="kicker"><span class="dot"></span>Training by doing</span>
+        <h1>Creating <em>experience</em> is everything</h1>
+        <p class="lead">MotoExperience is training by doing. Behaal je motorrijbewijs, upgrade je bochtentechniek en beleef de mooiste mototrips — on- en offroad.</p>
+        <div class="hero-cta">
+          <a href="#trainingen" class="btn btn-primary">Bekijk motortrainingen <span class="arr">→</span></a>
+          <a href="contact.html" class="btn btn-ghost">Contacteer me</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <span class="big">100<i style="color:var(--accent-deep)">%</i></span>
+      <span class="sub">passie voor de baan</span>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat"><div class="num" data-count="1200">0<i>+</i></div><div class="lab">Ritten</div></div>
+      <div class="stat"><div class="num" data-count="350">0<i>+</i></div><div class="lab">Tevreden motards</div></div>
+      <div class="stat"><div class="num" data-count="40">0<i>k</i></div><div class="lab">kms / jaar</div></div>
+      <div class="stat"><div class="num" data-count="100">0<i>%</i></div><div class="lab">Passie</div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="waarom">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker"><span class="dot"></span>Waarom MotoExperience?</span>
+        <h2>Training by doing — geen theorie, maar kilometers.</h2>
+        <p>Persoonlijke begeleiding door een gebrevetteerd en gepassioneerd instructeur. Je leert in het echte verkeer, op jouw tempo, met video-analyse die je écht vooruithelpt.</p>
+      </div>
+      <div class="usp-grid">
+        <div class="usp"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/></svg></div><h4>Gebrevetteerd instructeur</h4><p>Officieel erkend en pedagogisch geschoold om je veilig te laten groeien.</p></div>
+        <div class="usp"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></div><h4>Persoonlijke aanpak</h4><p>1-op-1 begeleiding, afgestemd op jouw niveau en doelen.</p></div>
+        <div class="usp"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div><h4>Gepassioneerd</h4><p>Rijden zit in het bloed — en die passie geef ik graag door.</p></div>
+        <div class="usp"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c4-4 7-7.5 7-11a7 7 0 10-14 0c0 3.5 3 7 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h4>Training op locatie</h4><p>We trainen waar jij rijdt — in jouw regio en op echte wegen.</p></div>
+        <div class="usp"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c0 1.5 2.5 3 5 3s5-1.5 5-3v-5"/></svg></div><h4>Pedagogisch geschoold</h4><p>Heldere uitleg, geduld en techniek die blijft hangen.</p></div>
+        <div class="usp"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10l4-2.5v9L17 14"/></svg></div><h4>Video-analyse</h4><p>Beeld liegt niet — samen kijken we naar jouw rijgedrag en verfijnen we het.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec trainings" id="trainingen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker"><span class="dot"></span>Motortrainingen</span>
+        <h2>It's about creating the experience.</h2>
+        <p>Kies jouw terrein. Twee werelden, dezelfde toewijding aan techniek, controle en plezier.</p>
+      </div>
+      <div class="train-grid">
+        <a href="on-road.html" class="train-card">
+          <img src="images/site/persoonlijkeTrainingw3.jpg" alt="">
+          <span class="tag">On-road</span>
+          <h3>On-road motortraining</h3>
+          <p>"Happiness isn't around the corner, it is the corner." Verfijn je bochtentechniek en je controle op de baan.</p>
+          <span class="more">Ontdek on-road <span class="arr">→</span></span>
+        </a>
+        <a href="off-road.html" class="train-card">
+          <img src="images/site/starttotet-1.jpg" alt="">
+          <span class="tag">Off-road</span>
+          <h3>Off-road motortraining</h3>
+          <p>"Straight roads don't make skilled drivers." Van Start to Trans Euro Trail tot echte terreinbeheersing.</p>
+          <span class="more">Ontdek off-road <span class="arr">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker"><span class="dot"></span>Wat motards zeggen</span>
+        <h2>Ervaringen van de baan.</h2>
+      </div>
+      <div class="tst-grid">
+        <div class="tst">
+          <div class="quote">"</div>
+          <p>Tijdens de training kon ik steeds gericht vragen stellen die beantwoord worden door een ervaren en verantwoordelijke moto-instructeur.</p>
+          <div class="who"><img src="images/testimonials/Kawasaki-Z1000-thegem-person-160.jpg" alt=""><div><b>Olivier</b><span>Kawasaki Z1000</span></div></div>
+        </div>
+        <div class="tst">
+          <div class="quote">"</div>
+          <p>Het technisch correct rijden met de machine en inzien dat het niet evident is om je veilig in het verkeer te begeven zonder de nodige skills. Noodzakelijk vóór ik me een motorfiets kocht.</p>
+          <div class="who"><img src="images/testimonials/honda-thegem-person-160.png" alt=""><div><b>Arissa</b><span>Honda Monkey 125cc</span></div></div>
+        </div>
+        <div class="tst">
+          <div class="quote">"</div>
+          <p>Zeer goede tips voor het parcoursgedeelte. Zeer bekwaam, geduldig en motiverend instructeur. Van 'een noodzakelijk kwaad' naar een aangename, leerzame cursus.</p>
+          <div class="who"><img src="images/testimonials/Yamaha-Fazer-600-thegem-person-160.jpg" alt=""><div><b>Arne</b><span>Yamaha Fazer 600</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Klaar om de bocht in te duiken?</h2>
+        <p>Plan je training of stel je vraag. Evert helpt je persoonlijk verder.</p>
+        <a href="contact.html" class="btn btn-light">Contacteer me <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div>
+          <a href="#" class="logo"><img src="images/site/logov3.png" alt="MotoExperience"></a>
+          <p class="foot-intro">Training by doing. Behaal je rijbewijs, verfijn je techniek en beleef de mooiste trips — on- en offroad.</p>
+        </div>
+        <div class="foot-col"><h5>Aanbod</h5><a href="#trainingen">Motortrainingen</a><a href="verhuur-motorkar.html">Verhuur motorkar</a><a href="rijbewijs-a.html">Rijbewijs A</a><a href="#trainingen">On-road &amp; off-road</a></div>
+        <div class="foot-col"><h5>Contact</h5><a href="tel:+32496548614">+32 496 54 86 14</a><a href="mailto:evert@motoexperience.be">evert@motoexperience.be</a><a href="contact.html">Contacteer me</a></div>
+        <div class="foot-col"><h5>Volg mee</h5><a href="https://www.facebook.com/MotoExperience.be" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/evert_cottyn" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/channel/UCpGGufGZKiUZWA8yBZ8b8MA" target="_blank" rel="noopener">YouTube</a></div>
+      </div>
+      <div class="foot-bot">
+        <span>© 2026 MotoExperience — Creating experience is everything</span>
+        <span>Gebouwd met passie voor de baan</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // count-up stats on scroll
+    const nums = document.querySelectorAll('.num[data-count]');
+    const fmt = n => n>=1000 ? Math.round(n).toLocaleString('nl-BE') : Math.round(n);
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(!e.isIntersecting) return;
+        const el = e.target, target = +el.dataset.count, suffix = el.querySelector('i').textContent;
+        let start = null;
+        const dur = 1400;
+        const step = (t)=>{
+          if(!start) start = t;
+          const p = Math.min((t-start)/dur, 1);
+          const eased = 1-Math.pow(1-p,3);
+          el.innerHTML = fmt(target*eased)+'<i>'+suffix+'</i>';
+          if(p<1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      });
+    },{threshold:.5});
+    nums.forEach(n=>io.observe(n));
+  </script>
+</body>
+</html>

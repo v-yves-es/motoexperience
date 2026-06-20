@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Off-road &amp; All-road motortraining | MotoExperience</title>
+<meta name="description" content="Off-road en all-road motortraining bij MotoExperience. Leer onverhard motorrijden op gras, zand, aarde en door water. Wordt trailklaar voor TET-routes in België.">
+<meta name="keywords" content="off-road training, all-road training, trail rijden, TET routes, onverhard motorrijden, GS training, Adventure bike, MotoExperience">
+<meta name="author" content="MotoExperience - Evert Cottyn">
+<link rel="canonical" href="https://www.motoexperience.be/off-road.html">
+<link rel="icon" type="image/png" href="images/site/logo_schaduw.png">
+<link rel="apple-touch-icon" href="images/site/logo_schaduw.png">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.motoexperience.be/off-road.html">
+<meta property="og:title" content="Off-road & All-road motortraining | MotoExperience">
+<meta property="og:description" content="Off-road en all-road motortraining. Leer onverhard motorrijden op gras, zand, aarde en door water. Wordt trailklaar voor TET-routes.">
+<meta property="og:image" content="https://www.motoexperience.be/images/site/logo_schaduw.png">
+<meta property="og:locale" content="nl_BE">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.motoexperience.be/off-road.html">
+<meta property="twitter:title" content="Off-road & All-road motortraining | MotoExperience">
+<meta property="twitter:description" content="Off-road en all-road motortraining. Leer onverhard motorrijden op gras, zand, aarde en door water. Wordt trailklaar voor TET-routes.">
+<meta property="twitter:image" content="https://www.motoexperience.be/images/site/logo_schaduw.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  .pagehero{padding:60px 0 56px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--accent-soft),transparent)}
+  .pagehero .crumb{font-size:13px;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+  .pagehero .crumb a{color:var(--muted);transition:color .2s}
+  .pagehero .crumb a:hover{color:var(--accent-deep)}
+  .pagehero .crumb .sep{opacity:.5}
+  .pagehero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .pagehero h1{font-family:var(--disp);font-weight:700;font-size:clamp(40px,5vw,66px);line-height:1;letter-spacing:-.025em;margin-bottom:20px}
+  .pagehero .slo{font-family:var(--disp);font-weight:500;font-size:20px;color:var(--accent-deep);margin-bottom:16px}
+  .pagehero p{font-size:17.5px;color:var(--muted);max-width:520px;text-wrap:pretty}
+  .pagehero img{width:100%;height:380px;border-radius:20px;object-fit:cover;display:block}
+
+  .sec{padding:78px 0}
+  .sec-head{max-width:720px;margin-bottom:42px}
+  .sec-head h2{font-family:var(--disp);font-weight:700;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.02em;line-height:1.08;margin-bottom:14px}
+  .sec-head p{font-size:17px;color:var(--muted);text-wrap:pretty}
+  .alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  /* program */
+  .program{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .program h2{font-family:var(--disp);font-weight:700;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.02em;line-height:1.08;margin-bottom:18px}
+  .program p{font-size:16.5px;color:var(--muted);margin-bottom:14px;text-wrap:pretty}
+  .program p a{color:var(--accent-deep);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+  .program p a:hover{text-decoration-color:var(--accent)}
+  .program img{width:100%;height:440px;border-radius:20px;object-fit:cover;display:block}
+
+  /* equipment callout */
+  .equip{display:flex;gap:18px;align-items:flex-start;background:var(--accent-soft);border-radius:18px;padding:26px 28px;margin-top:26px}
+  .equip .ic{width:46px;height:46px;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--accent-deep);flex:none}
+  .equip .ic svg{width:24px;height:24px}
+  .equip h4{font-family:var(--disp);font-weight:600;font-size:17px;margin-bottom:6px}
+  .equip p{font-size:15px;color:var(--muted);margin:0;text-wrap:pretty}
+  .equip p strong{color:var(--ink)}
+
+
+  /* offer cards */
+  .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .offer{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
+  .offer:hover{transform:translateY(-4px);box-shadow:0 24px 50px -32px rgba(0,0,0,.3)}
+  .offer .ico{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent-deep)}
+  .offer .ico svg{width:24px;height:24px}
+  .offer h3{font-family:var(--disp);font-weight:600;font-size:20px;letter-spacing:-.01em}
+  .offer p{font-size:15px;color:var(--muted);text-wrap:pretty;flex:1}
+  .offer .price-tag{font-family:var(--disp);font-weight:600;font-size:15px;color:var(--accent-deep);padding-top:6px;border-top:1px solid var(--line)}
+
+  /* pricing table */
+  .ptable h3{font-family:var(--disp);font-weight:700;font-size:24px;letter-spacing:-.01em;margin-bottom:6px}
+  .ptable .note{font-size:14.5px;color:var(--muted);margin-bottom:22px}
+  .ptable .rows{display:flex;flex-direction:column;gap:12px}
+  .prow{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:128px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;transition:transform .2s,border-color .2s,box-shadow .2s}
+  .prow:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 26px 50px -30px rgba(0,0,0,.3)}
+  .prow .left .form{font-family:var(--disp);font-weight:600;font-size:17px;margin-bottom:3px}
+  .prow .left .detail{font-size:13.5px;color:var(--muted);text-wrap:pretty}
+  .prow .right{text-align:right;flex:none}
+  .prow .right .amt{font-family:var(--disp);font-weight:700;font-size:24px;letter-spacing:-.01em;line-height:1}
+  .prow .right .per{font-size:12.5px;color:var(--muted)}
+  .prow .right a{display:inline-block;margin-top:8px;font-size:13px;font-weight:600;color:var(--accent-deep);border:1.5px solid var(--line);padding:6px 14px;border-radius:100px;transition:background .2s,color .2s,border-color .2s}
+  .prow .right a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .pricewrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+
+  /* video facades */
+  .videos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .video{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000;border:1px solid var(--line);display:block}
+  .video img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .video:hover img{transform:scale(1.05)}
+  .video::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3);transition:background .3s}
+  .video:hover::after{background:rgba(0,0,0,.1)}
+  .video .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;z-index:2;pointer-events:none}
+  .video .play svg{width:100%;height:100%;filter:drop-shadow(0 4px 20px rgba(0,0,0,.4))}
+
+  /* gallery — masonry: elke foto volledig zichtbaar, geen bijsnijding */
+  .gallery{columns:3;column-gap:16px}
+  .gallery figure{margin:0 0 16px;border-radius:16px;overflow:hidden;background:var(--accent-soft);break-inside:avoid}
+  .gallery img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .gallery img.land{aspect-ratio:4/3}
+  .gallery img.port{aspect-ratio:3/4}
+  .gallery figure:hover img{transform:scale(1.045)}
+  @media(max-width:900px){.gallery{columns:2}}
+  @media(max-width:560px){.gallery{columns:1}}
+
+  .cta-band{background:linear-gradient(140deg,var(--accent-deep) 0%,var(--accent) 92%);color:#fff;border-radius:26px;padding:60px;text-align:center;position:relative;overflow:hidden}
+  .cta-band::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.4);filter:blur(120px);opacity:.55;top:-160px;right:-60px}
+  .cta-band h2{font-family:var(--disp);font-weight:700;font-size:clamp(28px,3.6vw,46px);letter-spacing:-.02em;margin-bottom:14px;position:relative}
+  .cta-band p{font-size:18px;opacity:.82;max-width:500px;margin:0 auto 28px;position:relative}
+  .cta-band .btn{position:relative}
+  .cta-band .btn-light{background:#fff;color:var(--accent-deep)}
+  .cta-band .btn-light:hover{background:var(--accent-soft);color:var(--accent-deep)}
+
+  @media(max-width:900px){
+    .pagehero .grid,.program,.pricewrap{grid-template-columns:1fr}
+    .offers,.videos{grid-template-columns:1fr}
+  }
+  @media(max-width:640px){.videos{grid-template-columns:1fr}}
+</style>
+<style>
+  nav .logo img{height:40px;width:auto;display:block}
+  footer .logo img{height:34px;width:auto;display:block}
+  footer .logo::before{content:"";width:46px;height:46px;flex:none;background:url("images/site/logo_schaduw.png") center/contain no-repeat}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a href="index.html" class="logo"><img src="images/site/logov3.png" alt="MotoExperience"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#trainingen" class="active">Motortrainingen</a>
+        <a href="verhuur-motorkar.html">Verhuur motorkar</a>
+        <a href="rijbewijs-a.html">Rijbewijs A</a>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Contacteer me <span class="arr">→</span></a>
+    </div>
+  </nav>
+
+  <header class="pagehero">
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">Home</a><span class="sep">/</span><a href="index.html#trainingen">Motortrainingen</a><span class="sep">/</span><span>Off-road</span></div>
+      <div class="grid">
+        <div>
+          <span class="kicker"><span class="dot"></span>Off-road &amp; All-road</span>
+          <h1>Off-road</h1>
+          <p class="slo">"Straight roads don't make skilled drivers."</p>
+          <p>Learning by doing — weg van het asfalt. Maak het onverhard motorrijden eigen op gras, zand, aarde en door water, en rijd nadien zelfstandig jouw eerste kilometers op de TET-routes.</p>
+        </div>
+        <img src="images/off-road/offroad3.jpg" alt="">
+      </div>
+    </div>
+  </header>
+
+  <!-- Program -->
+  <section class="sec alt">
+    <div class="wrap">
+      <div class="program">
+        <div>
+          <span class="kicker"><span class="dot"></span>Off-road &amp; All-road Experience</span>
+          <h2>In één of twee dagen trailklaar</h2>
+          <p>Na deze training kan je zelfstandig jouw eerste kilometers doen op de ondertussen heel gekende TET-routes — de <a href="https://transeurotrail.org/" target="_blank" rel="noopener">Trans Euro Trail</a>.</p>
+          <p>In een halve dag of hele dag wordt aan de hand van 5 basics onverhard motorrijden eigen gemaakt, en dit met jouw eigen All-road. Deze training is voor wie een meer persoonlijke aanpak wil i.p.v. in groep. We starten vanaf nul en leggen de focus op de verschillende basistechnieken van het off-road rijden.</p>
+          <p>Beetje theorie, maar vooral veel praktijk op verschillende ondergronden — gras, zand, aarde en door water. Single tracks, veldwegen en "boere-karrieren".</p>
+          <div class="equip">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/></svg></span>
+            <div>
+              <h4>Wat breng je mee?</h4>
+              <p>Je komt met je eigen <strong>All-road motor</strong> (GS, Transalp, Africa Twin…), uitgerust met basis valbescherming en — aan te raden — <strong>noppenbanden</strong>.</p>
+            </div>
+          </div>
+        </div>
+        <img src="images/off-road/offroad5-scaled.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- Terrein -->
+  <section class="sec" id="terrein">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker"><span class="dot"></span>Waar je traint</span>
+        <h2>Elke ondergrond, echt terrein</h2>
+        <p>Geen kunstmatig parcours, maar de echte mix die je op de trail tegenkomt. Aan de hand van 5 basics maak je elke ondergrond en elk traject stap voor stap eigen — op locatie, op jouw tempo.</p>
+      </div>
+      <div class="offers">
+        <div class="offer">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21V9M12 21c-1-4-3-6-6-7M12 21c1-4 3-6 6-7M8 21c-.5-3-.5-5 0-7M16 21c.5-3 .5-5 0-7"/></svg></div>
+          <h3>Gras</h3>
+          <p>Grip en balans vinden op zacht, oneffen gras.</p>
+        </div>
+        <div class="offer">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5"/><path d="M3 19c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5"/><circle cx="17" cy="7" r="2"/></svg></div>
+          <h3>Zand</h3>
+          <p>Leren gas geven en recht blijven in los, drijvend zand.</p>
+        </div>
+        <div class="offer">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18l5-6 4 4 4-6 5 8z"/><path d="M3 21h18"/></svg></div>
+          <h3>Aarde</h3>
+          <p>Tractie en lijnkeuze op losse en harde aarde.</p>
+        </div>
+        <div class="offer">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3s6 6 6 10a6 6 0 11-12 0c0-4 6-10 6-10z"/></svg></div>
+          <h3>Door water</h3>
+          <p>Veilig plassen, beken en doorsteken aanpakken.</p>
+        </div>
+        <div class="offer">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 21c0-5 9-6 9-11S9 6 9 3"/><circle cx="8" cy="21" r="0.6" fill="currentColor"/></svg></div>
+          <h3>Single tracks</h3>
+          <p>Smalle bospaadjes met technische, krappe bochten.</p>
+        </div>
+        <div class="offer">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 21L9 3M18 21L15 3M12 6v2M12 11v2M12 16v2"/></svg></div>
+          <h3>Veldwegen &amp; boere-karrieren</h3>
+          <p>Hobbelige karrensporen en open onverharde wegen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aanbod / prijzen -->
+  <section class="sec alt" id="prijzen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker"><span class="dot"></span>Tarieven</span>
+        <h2>Motorles &amp; motorpakketten</h2>
+        <p>Heldere tarieven voor de motorles. Pakketten worden volledig op maat uitgewerkt — aanbod en route naar wens, in de regio van de klant of op advies.</p>
+      </div>
+      <div class="pricewrap">
+        <div class="ptable">
+          <h3>Motorles</h3>
+          <p class="note">Per uur · minstens 2 uur</p>
+          <div class="rows">
+            <div class="prow">
+              <div class="left"><div class="form">Individueel</div><div class="detail">Minstens 2 uur</div></div>
+              <div class="right"><div class="amt">€60</div><div class="per">per uur</div><a href="contact.html">Boek</a></div>
+            </div>
+            <div class="prow">
+              <div class="left"><div class="form">In duo</div><div class="detail">Minstens 2 uur</div></div>
+              <div class="right"><div class="amt">€100</div><div class="per">per uur</div><a href="contact.html">Boek</a></div>
+            </div>
+            <div class="prow">
+              <div class="left"><div class="form">In groep</div><div class="detail">Prijsaanvraag op maat</div></div>
+              <div class="right"><div class="amt">Op aanvraag</div><a href="contact.html">Boek</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ptable">
+          <h3>Motorpakketten</h3>
+          <p class="note">Halve of volledige dag · op maat uitgewerkt</p>
+          <div class="rows">
+            <div class="prow">
+              <div class="left"><div class="form">Individueel</div><div class="detail">Aanbod en route naar wens</div></div>
+              <div class="right"><div class="amt">Op aanvraag</div><a href="contact.html">Boek</a></div>
+            </div>
+            <div class="prow">
+              <div class="left"><div class="form">In duo</div><div class="detail">Aanbod en route naar wens</div></div>
+              <div class="right"><div class="amt">Op aanvraag</div><a href="contact.html">Boek</a></div>
+            </div>
+            <div class="prow">
+              <div class="left"><div class="form">In groep</div><div class="detail">Aanbod en route naar wens</div></div>
+              <div class="right"><div class="amt">Op aanvraag</div><a href="contact.html">Boek</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:14px;color:var(--muted);margin-top:22px">Videoanalyse tijdens de training is mogelijk voor <strong>€50</strong> (opname + film achteraf).</p>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker"><span class="dot"></span>Dompel je onder</span>
+        <h2>Off-road &amp; All-road in beeld</h2>
+        <p>Klik om af te spelen — een impressie van de trainingen op het terrein.</p>
+      </div>
+      <div class="videos">
+        <a href="https://www.youtube.com/watch?v=OZXkmvgAZI4" target="_blank" rel="noopener" class="video">
+          <img src="https://img.youtube.com/vi/OZXkmvgAZI4/maxresdefault.jpg" alt="MotoExperience off-road video" loading="lazy">
+          <span class="play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8.2 34.4.2 34.4.2S13 .2 8.3 1.6c-2.9.8-5.1 3.1-5.9 6C1 12.4 1 22.5 1 22.5s0 10.1 1.4 14.8c.8 2.9 3 5.1 5.9 5.9C13 44.5 34.4 44.5 34.4 44.5s21.4 0 26.2-1.3c2.9-.8 5.1-3 5.9-5.9C67.9 32.6 67.9 22.5 67.9 22.5s0-10.1-1.4-14.8z" fill="#f00"/><path d="M27 32l18-10L27 12v20z" fill="#fff"/></svg></span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=UXObC0iIOhQ" target="_blank" rel="noopener" class="video">
+          <img src="https://img.youtube.com/vi/UXObC0iIOhQ/maxresdefault.jpg" alt="MotoExperience off-road video" loading="lazy">
+          <span class="play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8.2 34.4.2 34.4.2S13 .2 8.3 1.6c-2.9.8-5.1 3.1-5.9 6C1 12.4 1 22.5 1 22.5s0 10.1 1.4 14.8c.8 2.9 3 5.1 5.9 5.9C13 44.5 34.4 44.5 34.4 44.5s21.4 0 26.2-1.3c2.9-.8 5.1-3 5.9-5.9C67.9 32.6 67.9 22.5 67.9 22.5s0-10.1-1.4-14.8z" fill="#f00"/><path d="M27 32l18-10L27 12v20z" fill="#fff"/></svg></span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=rlcg3a4gaZ8" target="_blank" rel="noopener" class="video">
+          <img src="https://img.youtube.com/vi/rlcg3a4gaZ8/maxresdefault.jpg" alt="MotoExperience off-road video" loading="lazy">
+          <span class="play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8.2 34.4.2 34.4.2S13 .2 8.3 1.6c-2.9.8-5.1 3.1-5.9 6C1 12.4 1 22.5 1 22.5s0 10.1 1.4 14.8c.8 2.9 3 5.1 5.9 5.9C13 44.5 34.4 44.5 34.4 44.5s21.4 0 26.2-1.3c2.9-.8 5.1-3 5.9-5.9C67.9 32.6 67.9 22.5 67.9 22.5s0-10.1-1.4-14.8z" fill="#f00"/><path d="M27 32l18-10L27 12v20z" fill="#fff"/></svg></span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=gPiwJ9oV5W4" target="_blank" rel="noopener" class="video">
+          <img src="https://img.youtube.com/vi/gPiwJ9oV5W4/maxresdefault.jpg" alt="MotoExperience off-road video" loading="lazy">
+          <span class="play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8.2 34.4.2 34.4.2S13 .2 8.3 1.6c-2.9.8-5.1 3.1-5.9 6C1 12.4 1 22.5 1 22.5s0 10.1 1.4 14.8c.8 2.9 3 5.1 5.9 5.9C13 44.5 34.4 44.5 34.4 44.5s21.4 0 26.2-1.3c2.9-.8 5.1-3 5.9-5.9C67.9 32.6 67.9 22.5 67.9 22.5s0-10.1-1.4-14.8z" fill="#f00"/><path d="M27 32l18-10L27 12v20z" fill="#fff"/></svg></span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=HxgHkR0fZoo" target="_blank" rel="noopener" class="video">
+          <img src="https://img.youtube.com/vi/HxgHkR0fZoo/sddefault.jpg" alt="MotoExperience off-road video" loading="lazy">
+          <span class="play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8.2 34.4.2 34.4.2S13 .2 8.3 1.6c-2.9.8-5.1 3.1-5.9 6C1 12.4 1 22.5 1 22.5s0 10.1 1.4 14.8c.8 2.9 3 5.1 5.9 5.9C13 44.5 34.4 44.5 34.4 44.5s21.4 0 26.2-1.3c2.9-.8 5.1-3 5.9-5.9C67.9 32.6 67.9 22.5 67.9 22.5s0-10.1-1.4-14.8z" fill="#f00"/><path d="M27 32l18-10L27 12v20z" fill="#fff"/></svg></span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=hGpoC_X2rtY" target="_blank" rel="noopener" class="video">
+          <img src="https://img.youtube.com/vi/hGpoC_X2rtY/maxresdefault.jpg" alt="MotoExperience off-road video" loading="lazy">
+          <span class="play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8.2 34.4.2 34.4.2S13 .2 8.3 1.6c-2.9.8-5.1 3.1-5.9 6C1 12.4 1 22.5 1 22.5s0 10.1 1.4 14.8c.8 2.9 3 5.1 5.9 5.9C13 44.5 34.4 44.5 34.4 44.5s21.4 0 26.2-1.3c2.9-.8 5.1-3 5.9-5.9C67.9 32.6 67.9 22.5 67.9 22.5s0-10.1-1.4-14.8z" fill="#f00"/><path d="M27 32l18-10L27 12v20z" fill="#fff"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Foto -->
+  <section class="sec alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker"><span class="dot"></span>Foto</span>
+        <h2>Modder, zand &amp; avontuur</h2>
+        <p>Een impressie van de off-road trainingen op het terrein.</p>
+      </div>
+      <div class="gallery">
+        <figure><img class="land" src="images/off-road/offroad1.jpg" alt="Off-road training" loading="lazy"></figure>
+        <figure><img class="port" src="images/off-road/IMG_0894-scaled.jpg" alt="Off-road training" loading="lazy"></figure>
+        <figure><img class="land" src="images/off-road/GOPR1727.jpg" alt="Off-road training" loading="lazy"></figure>
+        <figure><img class="land" src="images/off-road/offroad2.jpg" alt="Off-road training" loading="lazy"></figure>
+        <figure><img class="land" src="images/off-road/IMG_4630.jpg" alt="Off-road training" loading="lazy"></figure>
+        <figure><img class="land" src="images/off-road/offraod4.jpg" alt="Off-road training" loading="lazy"></figure>
+        <figure><img class="port" src="images/off-road/IMG_4643.jpg" alt="Off-road training" loading="lazy"></figure>
+        <figure><img class="land" src="images/off-road/IMG_4650.jpg" alt="Off-road training" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Klaar om het terrein in te trekken?</h2>
+        <p>Vraag je off-road &amp; all-road training aan. Evert helpt je persoonlijk verder.</p>
+        <a href="contact.html" class="btn btn-light">Neem contact met me op <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div>
+          <a href="index.html" class="logo"><img src="images/site/logov3.png" alt="MotoExperience"></a>
+          <p class="foot-intro">Training by doing. Behaal je rijbewijs, verfijn je techniek en beleef de mooiste trips — on- en offroad.</p>
+        </div>
+        <div class="foot-col"><h5>Aanbod</h5><a href="on-road.html">On-road training</a><a href="off-road.html">Off-road training</a><a href="verhuur-motorkar.html">Verhuur motorkar</a><a href="rijbewijs-a.html">Rijbewijs A</a></div>
+        <div class="foot-col"><h5>Contact</h5><a href="tel:+32496548614">+32 496 54 86 14</a><a href="mailto:evert@motoexperience.be">evert@motoexperience.be</a><a href="contact.html">Contacteer me</a></div>
+        <div class="foot-col"><h5>Volg mee</h5><a href="https://www.facebook.com/MotoExperience.be" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/evert_cottyn" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/channel/UCpGGufGZKiUZWA8yBZ8b8MA" target="_blank" rel="noopener">YouTube</a></div>
+      </div>
+      <div class="foot-bot">
+        <span>© 2026 MotoExperience — Creating experience is everything</span>
+        <span>Gebouwd met passie voor de baan</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
